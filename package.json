@@ -1,0 +1,25 @@
+{
+  "name": "ecommerce-api-directus",
+  "description": "ecommerce-api-directus",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Donald Wu <yeukfei02@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.10.5",
+    "directus": "^9.0.0-rc.74",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.6.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "git-cz": "^4.7.6",
+    "standard-version": "^9.3.0"
+  },
+  "scripts": {
+    "dev": "npx directus start",
+    "commit": "git-cz",
+    "release": "standard-version"
+  }
+}
