@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: ecommerceapidirectus
--- Generation Time: 2021-06-10 23:19:27.4600
+-- Generation Time: 2021-06-10 23:24:56.7770
 -- -------------------------------------------------------------
 
 
@@ -580,22 +580,22 @@ INSERT INTO "public"."shops" ("id", "name", "address", "created_at", "updated_at
 (2, 'shop2', 'kowloon', '2021-06-10 23:12:27.414+08', '2021-06-10 23:12:27.414+08');
 
 INSERT INTO "public"."users" ("id", "email", "password", "created_at", "updated_at") VALUES
-(2, 'test@test.com', '$2a$10$ODB3e9GJ50juJ2VWc6iN6Osx656eKZL66xo5i2eEi2zT1vs62wMJG', '2021-06-10 23:05:30.077+08', '2021-06-10 23:05:30.078+08'),
-(3, 'test2@test.com', '$2a$10$zO86VeoHpz5OVNY8xHqgYup7mwQ3hgeYLzcGb6jWCWBh5zarWbf9a', '2021-06-10 23:05:34.761+08', '2021-06-10 23:05:34.761+08'),
-(4, 'test3@test.com', '$2a$10$keIIusMJbOiioyzkxJrMmOUM9qfURKjhIYsXlgHz7XpVw0WaXJv0S', '2021-06-10 23:05:40.369+08', '2021-06-10 23:05:40.369+08');
+(1, 'test@test.com', '$2a$10$Z/yEnnY5o8c5T85l6HMXduPOdWDC6Wj3CDwYonOszdzQHA9.1J7OC', '2021-06-10 23:24:26.178+08', '2021-06-10 23:24:26.178+08'),
+(2, 'test2@test.com', '$2a$10$MYVWjtSUJwDTbgkd5ow9vua/BPv7znD82eayCEQULAKNMmQabU6xC', '2021-06-10 23:24:28.819+08', '2021-06-10 23:24:28.819+08'),
+(3, 'test3@test.com', '$2a$10$Y27MhnY5myO45SU28wHV2egoVcwjUYxapAuWg36Hk61EJH1rNcmCq', '2021-06-10 23:24:32.407+08', '2021-06-10 23:24:32.407+08');
 
 ALTER TABLE "public"."directus_fields" ADD FOREIGN KEY ("group") REFERENCES "public"."directus_fields"("id");
-ALTER TABLE "public"."directus_files" ADD FOREIGN KEY ("folder") REFERENCES "public"."directus_folders"("id") ON DELETE SET NULL;
-ALTER TABLE "public"."directus_files" ADD FOREIGN KEY ("modified_by") REFERENCES "public"."directus_users"("id");
 ALTER TABLE "public"."directus_files" ADD FOREIGN KEY ("uploaded_by") REFERENCES "public"."directus_users"("id");
+ALTER TABLE "public"."directus_files" ADD FOREIGN KEY ("modified_by") REFERENCES "public"."directus_users"("id");
+ALTER TABLE "public"."directus_files" ADD FOREIGN KEY ("folder") REFERENCES "public"."directus_folders"("id") ON DELETE SET NULL;
 ALTER TABLE "public"."directus_folders" ADD FOREIGN KEY ("parent") REFERENCES "public"."directus_folders"("id");
 ALTER TABLE "public"."directus_permissions" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE CASCADE;
-ALTER TABLE "public"."directus_presets" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_presets" ADD FOREIGN KEY ("user") REFERENCES "public"."directus_users"("id") ON DELETE CASCADE;
-ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("parent") REFERENCES "public"."directus_revisions"("id");
+ALTER TABLE "public"."directus_presets" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("activity") REFERENCES "public"."directus_activity"("id") ON DELETE CASCADE;
+ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("parent") REFERENCES "public"."directus_revisions"("id");
 ALTER TABLE "public"."directus_sessions" ADD FOREIGN KEY ("user") REFERENCES "public"."directus_users"("id") ON DELETE CASCADE;
-ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("public_foreground") REFERENCES "public"."directus_files"("id");
 ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("public_background") REFERENCES "public"."directus_files"("id");
 ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("project_logo") REFERENCES "public"."directus_files"("id");
+ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("public_foreground") REFERENCES "public"."directus_files"("id");
 ALTER TABLE "public"."directus_users" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE SET NULL;
