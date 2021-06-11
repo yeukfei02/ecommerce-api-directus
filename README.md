@@ -4,7 +4,7 @@ ecommerce-api-directus
 
 documentation: <https://documenter.getpostman.com/view/3827865/TzeRqAVv>
 
-cms url: <http://localhost:8055/admin>
+cms url: <https://ecommerce-api-directus.herokuapp.com/admin>
 
 ```zsh
 username: admin@admin.com
