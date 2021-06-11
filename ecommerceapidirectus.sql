@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: ecommerceapidirectus
--- Generation Time: 2021-06-10 23:24:56.7770
+-- Generation Time: 2021-06-11 08:46:46.3390
 -- -------------------------------------------------------------
 
 
@@ -462,7 +462,15 @@ INSERT INTO "public"."directus_activity" ("id", "action", "user", "timestamp", "
 (98, 'create', NULL, '2021-06-10 23:06:07.849962+08', '::1', 'PostmanRuntime/7.28.0', 'orders', '3', NULL),
 (99, 'create', NULL, '2021-06-10 23:06:10.268858+08', '::1', 'PostmanRuntime/7.28.0', 'orders', '4', NULL),
 (100, 'create', NULL, '2021-06-10 23:12:19.613195+08', '::1', 'PostmanRuntime/7.28.0', 'books', '2', NULL),
-(101, 'create', NULL, '2021-06-10 23:12:27.414172+08', '::1', 'PostmanRuntime/7.28.0', 'shops', '2', NULL);
+(101, 'create', NULL, '2021-06-10 23:12:27.414172+08', '::1', 'PostmanRuntime/7.28.0', 'shops', '2', NULL),
+(102, 'authenticate', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-10 23:28:25.894285+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_users', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', NULL),
+(103, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:43:58.980507+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '2', NULL),
+(104, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:44:00.150371+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '4', NULL),
+(105, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:44:06.822196+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '11', NULL),
+(106, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:44:07.924108+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '10', NULL),
+(107, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:44:25.509972+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '1', NULL),
+(108, 'create', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:44:56.337429+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '17', NULL),
+(109, 'delete', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-11 08:45:07.547725+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36', 'directus_permissions', '17', NULL);
 
 INSERT INTO "public"."directus_collections" ("collection", "icon", "note", "display_template", "hidden", "singleton", "translations", "archive_field", "archive_app_filter", "archive_value", "unarchive_value", "sort_field", "accountability", "color") VALUES
 ('books', NULL, NULL, NULL, 'f', 'f', NULL, NULL, 't', NULL, NULL, NULL, 'all', NULL),
@@ -517,17 +525,12 @@ INSERT INTO "public"."directus_migrations" ("version", "name", "timestamp") VALU
 ('20210521A', 'Add Collections Icon Color', '2021-06-10 21:11:42.692543+08');
 
 INSERT INTO "public"."directus_permissions" ("id", "role", "collection", "action", "permissions", "validation", "presets", "fields", "limit") VALUES
-(1, NULL, 'users', 'create', NULL, NULL, NULL, '*', NULL),
-(2, NULL, 'users', 'update', NULL, NULL, NULL, '*', NULL),
 (3, NULL, 'users', 'read', NULL, NULL, NULL, '*', NULL),
-(4, NULL, 'users', 'delete', NULL, NULL, NULL, '*', NULL),
 (5, NULL, 'books', 'create', NULL, NULL, NULL, '*', NULL),
 (6, NULL, 'books', 'delete', NULL, NULL, NULL, '*', NULL),
 (7, NULL, 'books', 'update', NULL, NULL, NULL, '*', NULL),
 (8, NULL, 'books', 'read', NULL, NULL, NULL, '*', NULL),
 (9, NULL, 'orders', 'read', NULL, NULL, NULL, '*', NULL),
-(10, NULL, 'orders', 'delete', NULL, NULL, NULL, '*', NULL),
-(11, NULL, 'orders', 'update', NULL, NULL, NULL, '*', NULL),
 (12, NULL, 'orders', 'create', NULL, NULL, NULL, '*', NULL),
 (13, NULL, 'shops', 'read', NULL, NULL, NULL, '*', NULL),
 (14, NULL, 'shops', 'delete', NULL, NULL, NULL, '*', NULL),
@@ -561,13 +564,13 @@ INSERT INTO "public"."directus_roles" ("id", "name", "icon", "description", "ip_
 ('5c745a88-d518-480d-9a6e-b74e5aa39ae2', 'Administrator', 'verified', 'Initial administrative role with unrestricted App/API access', NULL, 'f', NULL, NULL, 't', 't');
 
 INSERT INTO "public"."directus_sessions" ("token", "user", "expires", "ip", "user_agent") VALUES
-('jdRjxpax2oz-xR2e1pvKIwQP8gM0pzFgXXsboXEhf-BhKkJvaYEzwxWAzhn9b5aL', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-17 23:12:51.426+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36');
+('RN5S7ckkvZJQyxXhtbDfJA47Cc5HQB-PtwMLddwt0NVKrPR8WaQuYfmItVARKJ52', 'c6a9192d-82df-4ceb-8394-6b3e09d4fd37', '2021-06-18 08:43:03.221+08', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36');
 
 INSERT INTO "public"."directus_settings" ("id", "project_name", "project_url", "project_color", "project_logo", "public_foreground", "public_background", "public_note", "auth_login_attempts", "auth_password_policy", "storage_asset_transform", "storage_asset_presets", "custom_css") VALUES
 (1, 'ecommerce-api-directus', NULL, '#E35169', NULL, NULL, NULL, NULL, 25, NULL, 'all', NULL, NULL);
 
 INSERT INTO "public"."directus_users" ("id", "first_name", "last_name", "email", "password", "location", "title", "description", "tags", "avatar", "language", "theme", "tfa_secret", "status", "role", "token", "last_access", "last_page") VALUES
-('c6a9192d-82df-4ceb-8394-6b3e09d4fd37', 'Admin', 'User', 'admin@admin.com', '$argon2i$v=19$m=4096,t=3,p=1$f4aerTY9dSlGexq+N2fgZQ$GGSTHs09xK4dtnM9o4/58VdcJ4gWwYXVW2KhFChfzFk', NULL, NULL, NULL, NULL, NULL, 'en-US', 'auto', NULL, 'active', '5c745a88-d518-480d-9a6e-b74e5aa39ae2', NULL, '2021-06-10 23:12:51.387+08', '/collections/books');
+('c6a9192d-82df-4ceb-8394-6b3e09d4fd37', 'Admin', 'User', 'admin@admin.com', '$argon2i$v=19$m=4096,t=3,p=1$f4aerTY9dSlGexq+N2fgZQ$GGSTHs09xK4dtnM9o4/58VdcJ4gWwYXVW2KhFChfzFk', NULL, NULL, NULL, NULL, NULL, 'en-US', 'auto', NULL, 'active', '5c745a88-d518-480d-9a6e-b74e5aa39ae2', NULL, '2021-06-11 08:45:49.441+08', '/collections/users');
 
 INSERT INTO "public"."orders" ("id", "order_detail", "users_id", "shops_id", "created_at", "updated_at") VALUES
 (1, 'test', 3, 3, '2021-06-10 23:05:59.12+08', '2021-06-10 23:05:59.12+08'),
@@ -592,8 +595,8 @@ ALTER TABLE "public"."directus_folders" ADD FOREIGN KEY ("parent") REFERENCES "p
 ALTER TABLE "public"."directus_permissions" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_presets" ADD FOREIGN KEY ("user") REFERENCES "public"."directus_users"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_presets" ADD FOREIGN KEY ("role") REFERENCES "public"."directus_roles"("id") ON DELETE CASCADE;
-ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("activity") REFERENCES "public"."directus_activity"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("parent") REFERENCES "public"."directus_revisions"("id");
+ALTER TABLE "public"."directus_revisions" ADD FOREIGN KEY ("activity") REFERENCES "public"."directus_activity"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_sessions" ADD FOREIGN KEY ("user") REFERENCES "public"."directus_users"("id") ON DELETE CASCADE;
 ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("public_background") REFERENCES "public"."directus_files"("id");
 ALTER TABLE "public"."directus_settings" ADD FOREIGN KEY ("project_logo") REFERENCES "public"."directus_files"("id");
