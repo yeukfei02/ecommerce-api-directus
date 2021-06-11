@@ -19,6 +19,7 @@
   },
   "scripts": {
     "dev": "npx directus start",
+    "start": "npx directus start",
     "commit": "git-cz",
     "release": "standard-version"
   }
