@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/yeukfei02/ecommerce-api-directus/compare/v0.1.4...v0.1.5) (2021-06-12)
+
+
+### Features
+
+* 🎸 add @directus/sdk lib ([fbc38ea](https://github.com/yeukfei02/ecommerce-api-directus/commit/fbc38eaee698904c36f8b84815a12a2f4a4a0446))
+
 ### [0.1.4](https://github.com/yeukfei02/ecommerce-api-directus/compare/v0.1.3...v0.1.4) (2021-06-11)
 
 ### [0.1.3](https://github.com/yeukfei02/ecommerce-api-directus/compare/v0.1.2...v0.1.3) (2021-06-11)
