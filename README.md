@@ -4,6 +4,8 @@ ecommerce-api-directus
 
 documentation: <https://documenter.getpostman.com/view/3827865/TzeRqAVv>
 
+api url: <https://ecommerce-api-directus.herokuapp.com>
+
 cms url: <https://ecommerce-api-directus.herokuapp.com/admin>
 
 ```zsh
