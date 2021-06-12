@@ -6,6 +6,7 @@
   "author": "Donald Wu <yeukfei02@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@directus/sdk": "^9.0.0-rc.75",
     "bcryptjs": "^2.4.3",
     "dayjs": "^1.10.5",
     "directus": "^9.0.0-rc.74",
